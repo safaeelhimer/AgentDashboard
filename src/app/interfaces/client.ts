@@ -4,7 +4,7 @@ export interface Client {
     prenom : string
     mdp : string
     tel : string
-    cne : string
+    cin : string
     date : Date
     email: string
 
