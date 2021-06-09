@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { NotifierModule } from 'angular-notifier';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
@@ -25,7 +24,6 @@ import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
     FormsModule,
     HttpClientModule,
     RouterModule,
-    NotifierModule,
     BrowserAnimationsModule,
     MatSnackBarModule
 
