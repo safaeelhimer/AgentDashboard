@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import * as Highcharts from 'highcharts';
-import HC_exporting from 'highcharts/modules/exporting';
+;
 
 @Component({
   selector: 'app-widget-card',
@@ -8,6 +7,13 @@ import HC_exporting from 'highcharts/modules/exporting';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
+
+  @Input() nom: string = " ";
+  @Input() prenom: string = " ";
+  @Input() email: string = " ";
+  @Input() cin: string = " ";
+  @Input() tel: string = " "; 
+
 
   constructor() { }
 
