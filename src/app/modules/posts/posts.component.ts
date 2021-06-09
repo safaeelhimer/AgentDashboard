@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { AgentServiceService } from 'src/app/agent-service.service';
+import { NotifierService } from 'src/app/notifier.service';
 
 @Component({
   selector: 'app-posts',
@@ -12,8 +13,9 @@ import { AgentServiceService } from 'src/app/agent-service.service';
 })
 
 export class PostsComponent implements OnInit {
+  constructor(private agentService : AgentServiceService,private notifierService : NotifierService) {
 
-  constructor(private agentService : AgentServiceService) { }
+   }
 
   ngOnInit(): void {
   }
@@ -22,9 +24,10 @@ export class PostsComponent implements OnInit {
       (response:any) => {
       if(response){
         console.log(response);
+        this.notifierService.showNotification("Transaction done successfully" ,"",'success');
 
       }else{
-        console.log("not found");
+        this.notifierService.showNotification("incorrect rib number !","",'danger');
 
       }
       console.log(response)},

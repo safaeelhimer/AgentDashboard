@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AgentServiceService } from '../agent-service.service';
 import { Agent } from '../interfaces/agent';
+import { NotifierService } from '../notifier.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,10 @@ import { Agent } from '../interfaces/agent';
 })
 export class LoginComponent implements OnInit {
   returnAgent! : Agent;
-  constructor(private agentService : AgentServiceService,private router : Router) { }
+
+  constructor(private agentService : AgentServiceService,private router : Router,private notifierService : NotifierService) { 
+
+  }
 
   ngOnInit(): void {
     let myLocalstorage = localStorage.getItem("currentAgent");
@@ -30,8 +34,11 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("emailAgent",this.returnAgent.email);
         localStorage.setItem("nomAgent",this.returnAgent.nom + " " + this.returnAgent.prenom);
         this.router.navigate(['']);
-      }else{
         console.log("not found");
+        this.notifierService.showNotification("Welcome back " + this.returnAgent.nom + " " + this.returnAgent.prenom ,"",'success');
+        
+      }else{
+        this.notifierService.showNotification("incorrect Email or Password","",'danger');
 
       }
       console.log(response)},
