@@ -1,0 +1,32 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <img src="https://e7.pngegg.com/pngimages/221/585/png-clipart-financial-adviser-finance-bank-financial-planner-bank-service-investment.png" alt="Agent">
+        <div class="header">
+            <h2>{{nomAgent}}</h2>
+            <h4>{{emailAgent}}</h4>
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Pages</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/versement">versment</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Tools</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>import_contacts</mat-icon>
+        Contacts
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>contact_phone</mat-icon>
+        Leads
+    </a>
+
+</mat-nav-list>

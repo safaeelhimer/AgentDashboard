@@ -1,0 +1,16 @@
+<h1>Verser dans un compte</h1>
+<form #verser="ngForm" (ngSubmit)="onVerse(verser)">
+    <div class="form-group">
+      <label for="cin">n° CIN du verseur</label>
+      <input type="text" class="form-control" id="cin" aria-describedby="cin" placeholder="n° CIN" ngModel name="CIN" required>
+    </div>
+    <div class="form-group">
+      <label for="rib">n° RIB du compte</label>
+      <input type="text" class="form-control" id="rib" placeholder="n°RIB" ngModel name="rib" required>
+    </div>
+    <div class="form-group">
+        <label for="solde">solde à verser</label>
+        <input type="text" class="form-control" id="solde" placeholder="solde" ngModel name="solde" required>
+      </div>
+      <button [disabled]="!verser.valid" class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+  </form>
