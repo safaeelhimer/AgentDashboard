@@ -5,8 +5,8 @@
 
 <br>
 
-<div fxLayout="row" fxLayoutAlign="space-between center"  class="stats-cards" >
-    <mat-card fxFlex="25" *ngFor="let client of clients" >
+<div fxLayout="row" fxLayoutAlign=" center"  class="stats-cards row pl-4 ml-4" fxLayoutGap="18px" >
+    <mat-card  *ngFor="let client of clients" class="col-3 mt-4 ml-4"   >
         <app-widget-card nom={{client.nom}} prenom={{client.prenom}} cin={{client.cin}} email={{client.email}} tel={{client.tel}} ></app-widget-card>
     </mat-card>
    
