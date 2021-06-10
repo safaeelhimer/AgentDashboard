@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from './widgets/card/card.component';
+import { CompteComponent } from './widgets/compte/compte.component';
 
 
 
@@ -24,7 +25,9 @@ import { CardComponent } from './widgets/card/card.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    CardComponent
+    CardComponent,
+    CompteComponent
+
   ],
   imports: [
     CommonModule,
@@ -43,7 +46,8 @@ import { CardComponent } from './widgets/card/card.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    CardComponent
+    CardComponent,
+    CompteComponent
   ]
 })
 export class SharedModule { }

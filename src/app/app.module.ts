@@ -11,12 +11,14 @@ import { RouterModule } from '@angular/router';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { ClientComponent } from './modules/client/client.component';
+import { CdetailsComponent } from './modules/cdetails/cdetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ClientComponent,
+    CdetailsComponent,
     
   ],
   imports: [

@@ -13,6 +13,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { CompteComponent } from 'src/app/shared/widgets/compte/compte.component';
 
 
 
@@ -23,7 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     DefaultComponent,
     AgentdashboardComponent,
-    PostsComponent
+    PostsComponent,
   ],
   
   imports: [

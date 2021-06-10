@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+
 ;
 
 @Component({
@@ -7,7 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-
+  @Input() id: string = " ";
   @Input() nom: string = " ";
   @Input() prenom: string = " ";
   @Input() email: string = " ";
@@ -25,5 +28,7 @@ export class CardComponent implements OnInit {
       );
     }, 300);
   }
+
+
 
 }

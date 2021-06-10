@@ -10,13 +10,11 @@
 
 <div fxLayout="row" class="stats-cards row ml-4" >
     <mat-card  *ngFor="let client of clients" class="col-3 mt-4 ml-3 w-auto h-auto" >
-        <app-widget-card nom={{client.nom}} prenom={{client.prenom}} cin={{client.cin}} email={{client.email}} tel={{client.tel}} ></app-widget-card>
+        <app-widget-card nom={{client.nom}} prenom={{client.prenom}} cin={{client.cin}} email={{client.email}} tel={{client.tel}} id="{{client.id_client}}"></app-widget-card>
     </mat-card>
    
 </div>
 
 <br>
-
-
 
 <br>

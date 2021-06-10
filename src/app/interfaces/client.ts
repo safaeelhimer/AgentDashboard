@@ -1,5 +1,5 @@
 export interface Client {
-     id : String
+    id_client : String
     nom : string
     prenom : string
     mdp : string

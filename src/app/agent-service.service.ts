@@ -25,5 +25,10 @@ export class AgentServiceService {
 
     return this.http.post<any>(this.host + "/verserSolde",compte);
   }
+
+  public afficher(client : any) : Observable<any>{
+
+    return this.http.post<any>(this.host + "/getClientComptes", client);
+  }
   
 }
