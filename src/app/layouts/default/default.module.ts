@@ -12,6 +12,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -36,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatTableModule,
     FormsModule,
+    MatIconModule
     
 
   ]

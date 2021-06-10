@@ -1,12 +1,15 @@
 
-<br>
+<div class="input-group rounded w-25 float-right">
+    <input type="search" (ngModelChange)="searchClients(key.value)" class="form-control rounded mr-2 mb-4" placeholder="Search" aria-label="Search"
+      aria-describedby="search-addon" #key="ngModel" ngModel />
+        <mat-icon class="mt-2">search</mat-icon>
+  </div>
+  <br><br>
+  <mat-divider class="clearfix"></mat-divider>
 
-<mat-divider></mat-divider>
 
-<br>
-
-<div fxLayout="row" fxLayoutAlign=" center"  class="stats-cards row pl-4 ml-4" fxLayoutGap="18px" >
-    <mat-card  *ngFor="let client of clients" class="col-3 mt-4 ml-4"   >
+<div fxLayout="row" class="stats-cards row ml-4" >
+    <mat-card  *ngFor="let client of clients" class="col-3 mt-4 ml-3 w-auto h-auto" >
         <app-widget-card nom={{client.nom}} prenom={{client.prenom}} cin={{client.cin}} email={{client.email}} tel={{client.tel}} ></app-widget-card>
     </mat-card>
    
@@ -14,6 +17,6 @@
 
 <br>
 
-<mat-divider></mat-divider>
+
 
 <br>

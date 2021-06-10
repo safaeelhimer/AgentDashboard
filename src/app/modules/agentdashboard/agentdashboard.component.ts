@@ -13,6 +13,7 @@ export class AgentdashboardComponent implements OnInit {
 
   private agentId : String |any = "";
   public clients: Client[] =  [];
+  private clientsCopy : Client[] = [];
 
 
   constructor(private agentService : AgentServiceService,private router : Router) { }
@@ -30,8 +31,26 @@ export class AgentdashboardComponent implements OnInit {
   private  getAgentClients(){
     this.agentService.getAgentClients(this.agentId).subscribe(
       (response:Client[]) => {
-      this.clients = response},(err : HttpErrorResponse) => {console.log (err)});
+      this.clients = response; this.clientsCopy = this.clients},(err : HttpErrorResponse) => {console.log (err)});
       
+      
+  }
+
+  public searchClients(key : String){
+    console.log(key);
+    const result : Client[] = [];
+    for(const client of this.clientsCopy){
+      if(client.nom.toLowerCase().indexOf(key.toLowerCase()) !== -1 || client.prenom.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||client.cin.toLowerCase().indexOf(key.toLowerCase()) !== -1){
+        result.push(client);
+      }
+    }
+      console.log(result);
+      this.clients = result;
+      if(result.length < 0 || !key){
+        console.log("yes");
+        this.getAgentClients();
+      }
+    
   }
 
 
