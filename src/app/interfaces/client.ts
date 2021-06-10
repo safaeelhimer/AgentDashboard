@@ -1,3 +1,6 @@
+import { Agent } from "./agent";
+
+
 export interface Client {
     id_client : String
     nom : string
@@ -7,5 +10,6 @@ export interface Client {
     cin : string
     date : Date
     email: string
+    agent : Agent
 
 }
