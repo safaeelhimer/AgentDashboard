@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { AgentdashboardComponent } from './modules/agentdashboard/agentdashboard.component';
 import { CdetailsComponent } from './modules/cdetails/cdetails.component';
 import { ClientComponent } from './modules/client/client.component';
+import { EspcaeagentComponent } from './modules/espcaeagent/espcaeagent.component';
 import { PostsComponent } from './modules/posts/posts.component';
 
 const routes: Routes = [
@@ -25,7 +26,11 @@ const routes: Routes = [
     {
       path:'clientDetails/:id',
       component: CdetailsComponent
-      }
+      },
+      {
+        path:'espaceagent',
+        component: EspcaeagentComponent
+        }
 
 
 ]

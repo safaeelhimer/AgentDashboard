@@ -12,6 +12,7 @@ import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { ClientComponent } from './modules/client/client.component';
 import { CdetailsComponent } from './modules/cdetails/cdetails.component';
+import { EspcaeagentComponent } from './modules/espcaeagent/espcaeagent.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CdetailsComponent } from './modules/cdetails/cdetails.component';
     LoginComponent,
     ClientComponent,
     CdetailsComponent,
+    EspcaeagentComponent,
     
   ],
   imports: [

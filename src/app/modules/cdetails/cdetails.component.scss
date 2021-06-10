@@ -9,8 +9,8 @@
     text-align: center;
     font-size: 12px;
     padding: 5px;
-    width: 150px;
-    height: 50px;
+    width: 100px;
+    height: 30px;
     transition: all 0.5s;
     cursor: pointer;
   }
@@ -28,6 +28,10 @@
     height: 50px;
     transition: all 0.5s;
     cursor: pointer;
+    margin-left: 100px;
+    margin-right: 100px;
+
+
   }
   
   .button .button1 span {
@@ -60,6 +64,8 @@
     background-color: #fff;
     border-radius: 10px;
     border: none;
+    margin-top: 20px;
+    width: 180%;
     position: relative;
     margin-bottom: 30px;
     box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
@@ -67,7 +73,7 @@
 
 
 .l-bg-orange-dark {
-    background: linear-gradient(to right, #a86008, #ffba56) !important;
+    background: linear-gradient(to right, #a6c4e1, #8e98bb) !important;
     color: #fff;
 }
 
@@ -88,6 +94,6 @@
 
 
 .l-bg-orange {
-    background: linear-gradient(to right, #f9900e, #ffba56) !important;
+    background: linear-gradient(to right, #8c51b6, #eef5f5) !important;
     color: #fff;
 }
