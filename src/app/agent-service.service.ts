@@ -25,5 +25,9 @@ export class AgentServiceService {
 
     return this.http.post<any>(this.host + "/verserSolde",compte);
   }
+
+  public addClient(client : Client){
+    return this.http.post<Client>(this.host + "/SaveClient",client);
+  }
   
 }
