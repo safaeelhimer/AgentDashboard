@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { LoginComponent } from './login/login.component';
+import { AddcompteComponent } from './modules/addcompte/addcompte.component';
 import { AgentdashboardComponent } from './modules/agentdashboard/agentdashboard.component';
 import { CdetailsComponent } from './modules/cdetails/cdetails.component';
 import { ClientComponent } from './modules/client/client.component';
@@ -30,7 +31,12 @@ const routes: Routes = [
       {
         path:'espaceagent',
         component: EspcaeagentComponent
-        }
+        },
+        {
+          path:'addcompte',
+          component: AddcompteComponent
+          }
+
 
 
 ]

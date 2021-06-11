@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ClientComponent } from './modules/client/client.component';
 import { CdetailsComponent } from './modules/cdetails/cdetails.component';
 import { EspcaeagentComponent } from './modules/espcaeagent/espcaeagent.component';
+import { AddcompteComponent } from './modules/addcompte/addcompte.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { EspcaeagentComponent } from './modules/espcaeagent/espcaeagent.componen
     ClientComponent,
     CdetailsComponent,
     EspcaeagentComponent,
+    AddcompteComponent,
     
   ],
   imports: [

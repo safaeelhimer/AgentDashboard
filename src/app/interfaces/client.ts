@@ -2,7 +2,7 @@ import { Agent } from "./agent";
 
 
 export interface Client {
-    id_client : String
+    id_client : string
     nom : string
     prenom : string
     mdp : string

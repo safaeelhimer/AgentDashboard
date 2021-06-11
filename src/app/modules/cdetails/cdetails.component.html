@@ -21,7 +21,7 @@
                                 ${{compte.solde}}
                             </h1>                        </div>
                     </div>
-                    <button class="button" style="vertical-align:middle" type="submit"><span> <b>Supprimer</b> </span></button> 
+                    <button class="button" (click) = "deleteCompte()" style="vertical-align:middle" type="submit"><span> <b>Supprimer</b> </span></button> 
 
   
   
@@ -33,6 +33,6 @@
 
 
 <div>
- <button class="button1" style="vertical-align:middle" type="submit"><span> <b> Ajouter un Compte</b> </span></button> 
+    <a routerLink="/addcompte"> <button class="button1" style="vertical-align:middle" type="submit"><span> <b> Ajouter un Compte</b> </span></button> </a>
 </div>
 
