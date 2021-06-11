@@ -33,5 +33,10 @@ export class AgentServiceService {
   public addClient(client : Client){
     return this.http.post<Client>(this.host + "/SaveClient",client);
   }
+
+  public findAgent(agent : Agent) : Observable<Agent>{
+
+    return this.http.post<Agent>(this.host +"/findAgent",agent);
+  }
   
 }
