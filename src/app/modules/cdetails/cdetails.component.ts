@@ -20,11 +20,14 @@ export class CdetailsComponent implements OnInit {
   ngOnInit(): void {
     this.clientId = this.route.snapshot.paramMap.get("id")!;
     this.getClientComptes();
+    localStorage.setItem("currentClient",this.clientId);
+
 
 }
 public getClientComptes() {
   let client = {} as Client;
   client.id_client = this.clientId;
+
   let a = this.agentService.afficher(client).subscribe(
     (response:Compte[]) => {
     if(response){
@@ -36,6 +39,12 @@ public getClientComptes() {
 
   
 });
+}
+
+deleteCompte(){
+  this.agentService.deleteCompte(this.clientId).subscribe( response => {console.log(response);
+  this.getClientComptes();
+})
 }
 
 }

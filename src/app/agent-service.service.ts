@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Client } from './interfaces/client';
 import { Agent } from './interfaces/agent';
+import { Compte } from './interfaces/compte';
 
 @Injectable({
   providedIn: 'root'
@@ -29,9 +30,16 @@ export class AgentServiceService {
   public afficher(client : any) : Observable<any>{
 
     return this.http.post<any>(this.host + "/getClientComptes", client);}
-    
+
   public addClient(client : Client){
     return this.http.post<Client>(this.host + "/SaveClient",client);
+  }
+  public addCompte(compte : Compte){
+    return this.http.post<Client>(this.host + "/SaveCompte",compte);
+  }
+  public deleteCompte(id : String) : Observable<Object> {
+    return this.http.post<Compte>(this.host + "/deleteCompte",id);
+
   }
   
 }
