@@ -22,6 +22,9 @@ export class LoginComponent implements OnInit {
     let myLocalstorage = localStorage.getItem("currentAgent");
     if(myLocalstorage){
         this.router.navigate(['']);
+        setTimeout(()=>{
+          localStorage.clear();
+    },1000*60*20)
     }
   }
   onLogin(loginxform: NgForm){
