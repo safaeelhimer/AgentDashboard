@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Client } from './interfaces/client';
 import { Agent } from './interfaces/agent';
 import { Compte } from './interfaces/compte';
+import { Operation } from './interfaces/operation';
 
 @Injectable({
   providedIn: 'root'
@@ -47,4 +48,10 @@ export class AgentServiceService {
 
   }
   
+  public getClientByPost(id : string){
+    return this.http.post<Client>(this.host + "/getClientByPost",id);
+  }
+  public getOperationsByPost(id : String){
+    return this.http.post<Operation[]>(this.host + "/getOperationsByRib",id);
+  }
 }
