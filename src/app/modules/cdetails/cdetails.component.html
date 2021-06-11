@@ -1,6 +1,9 @@
-<p>Comptes du client </p>
+<br>
+<h1> <b> Comptes du client : </b> </h1>
+<br>
 
-<p> this is my {{ clientId }} </p>
+ <h3 class="text-danger"> ID du client:  <b> {{ clientId }}  </b> </h3>
+ <hr>
 
 <br><br>
 
@@ -21,7 +24,7 @@
                                 ${{compte.solde}}
                             </h1>                        </div>
                     </div>
-                    <button class="button" (click) = "deleteCompte()" style="vertical-align:middle" type="submit"><span> <b>Supprimer</b> </span></button> 
+                    <button class="button" (click)= "deleteCompte(compte.id_compte)" style="vertical-align:middle" value="{{compte.rib}}" type="submit"><span> <b>Supprimer</b> </span></button> 
 
   
   

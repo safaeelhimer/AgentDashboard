@@ -1,8 +1,14 @@
 .firstdiv{
     display: flex;
     padding: 2%;
+    margin-left: 28%;
 }
 .hdivs{
-    margin-top: 7%;
+    margin-top: 2%;
     margin-left: 9%;
+}
+img{
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 30px;
 }

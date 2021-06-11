@@ -5,5 +5,6 @@ export interface Compte {
    rib : string
    solde : number
    client : Client
+   id_client : string
 
 }

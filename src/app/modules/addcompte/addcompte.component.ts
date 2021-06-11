@@ -22,10 +22,8 @@ export class AddcompteComponent implements OnInit {
     let compte: Compte;
     compte = ajouterCompte.value;
     console.log(localStorage.getItem("currentClient")!);
-    let  currentClient =  {} as Client;
-    currentClient.id_client = localStorage.getItem("currentClient")!;
-    compte.client = currentClient;
-    console.log(compte);
+    compte.id_client = localStorage.getItem("currentClient")!;
+    console.log("this is compte sent",compte);
 
     let a = this.agentService.addCompte(compte).subscribe(
       (response:any) => {
@@ -33,7 +31,7 @@ export class AddcompteComponent implements OnInit {
       if(response){
         console.log(response);
         this.notifierService.showNotification("un Client a été ajouté avec Succés" ,"",'success');
-        this.router.navigate(['/clientDetails/'+ currentClient.id_client]);
+        this.router.navigate(['/clientDetails/'+ compte.id_client]);
 
       }else{
         this.notifierService.showNotification("error dans l'ajout par serveur , ressaye !","",'danger');

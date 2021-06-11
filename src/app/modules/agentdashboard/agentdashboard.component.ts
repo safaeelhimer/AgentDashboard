@@ -31,7 +31,11 @@ export class AgentdashboardComponent implements OnInit {
   private  getAgentClients(){
     this.agentService.getAgentClients(this.agentId).subscribe(
       (response:Client[]) => {
-      this.clients = response; this.clientsCopy = this.clients},(err : HttpErrorResponse) => {console.log (err)});
+        this.clients = response;
+      
+       this.clientsCopy = this.clients;
+       console.log('myclients',this.clients);
+    },(err : HttpErrorResponse) => {console.log (err)});
       
       
   }
