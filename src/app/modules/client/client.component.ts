@@ -23,7 +23,7 @@ export class ClientComponent implements OnInit {
   public onAjouterClient(ajouterClient : NgForm){
     let client: Client;
     client = ajouterClient.value;
-    client.date = new Date();
+    client.date = new Date('2021-06-12');
     let  currentAgent =  {} as Agent;
     currentAgent.id_Agent = localStorage.getItem("currentAgent")!;
     client.agent = currentAgent;
@@ -32,7 +32,6 @@ export class ClientComponent implements OnInit {
     let a = this.agentService.addClient(client).subscribe(
       (response:any) => {
       if(response){
-        
         console.log(response);
         this.notifierService.showNotification("un Client a été ajouté avec Succés" ,"",'success');
         this.router.navigate(['']);

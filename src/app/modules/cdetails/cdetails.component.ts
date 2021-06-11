@@ -41,9 +41,10 @@ public getClientComptes() {
 });
 }
 
-deleteCompte(){
-  this.agentService.deleteCompte(this.clientId).subscribe( response => {console.log(response);
-  this.getClientComptes();
+deleteCompte(id: string){
+
+  this.agentService.deleteCompte(id).subscribe( response => {console.log(response);
+ this.getClientComptes();
 })
 }
 
